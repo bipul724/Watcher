@@ -1,0 +1,19 @@
+{
+  "name": "watcher-mocks-and-tests",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:unit": "node unit/library.test.js",
+    "test:recall": "node unit/runbook-recall.test.js",
+    "test:e2e": "node e2e/e2e.test.js"
+  },
+  "dependencies": {
+    "@pinecone-database/pinecone": "^7.2.0",
+    "axios": "^1.15.2",
+    "discord.js": "^14.26.3",
+    "dotenv": "^16.4.0",
+    "octokit": "^5.0.5",
+    "zod": "^3.22.0"
+  }
+}

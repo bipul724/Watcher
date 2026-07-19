@@ -1,0 +1,19 @@
+{
+  "service": "payment-gateway",
+  "alert": {
+    "error": "WARNING: DB query latency elevated — avg 1200ms (threshold 500ms)",
+    "latencyMs": 1200,
+    "errorRate": 0.15,
+    "affectedEndpoints": ["/api/v2/charge"],
+    "region": "us-east-1",
+    "env": "production"
+  },
+  "message": "Payment Gateway latency degraded. P99 latency 1200ms, error rate 15%.",
+  "metadata": {
+    "env": "production",
+    "region": "us-east-1",
+    "timestamp": "2026-05-02T08:10:00.000Z",
+    "pagerduty_service_id": "PABC1234",
+    "runbook_hint": "Elevated query latency — check slow query log, index health"
+  }
+}

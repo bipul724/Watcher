@@ -1,0 +1,19 @@
+{
+  "service": "payment-gateway",
+  "alert": {
+    "error": "FATAL: Connection pool exhausted — all 20 connections to payments-db timed out",
+    "latencyMs": 4800,
+    "errorRate": 0.87,
+    "affectedEndpoints": ["/api/v2/charge", "/api/v2/refund"],
+    "region": "us-east-1",
+    "env": "production"
+  },
+  "message": "Payment Gateway degradation detected. Error rate 87%, P99 latency 4800ms.",
+  "metadata": {
+    "env": "production",
+    "region": "us-east-1",
+    "timestamp": "2026-05-02T07:47:00.000Z",
+    "pagerduty_service_id": "PABC1234",
+    "runbook_hint": "DB connection pool exhaustion — check pg_stat_activity, scale connection pooler"
+  }
+}

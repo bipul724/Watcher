@@ -1,0 +1,19 @@
+{
+  "service": "fraud-detection",
+  "alert": {
+    "error": "CRITICAL: ML model inference service OOMKilled — fraud-detection-worker pod restarted 5 times",
+    "latencyMs": 9200,
+    "errorRate": 0.95,
+    "affectedEndpoints": ["/api/v1/transaction/verify"],
+    "region": "eu-west-1",
+    "env": "production"
+  },
+  "message": "Fraud Detection service is down. All transaction verifications failing. OOMKilled.",
+  "metadata": {
+    "env": "production",
+    "region": "eu-west-1",
+    "timestamp": "2026-05-02T09:00:00.000Z",
+    "pagerduty_service_id": "PFRD5678",
+    "runbook_hint": "OOMKilled — increase memory limits in k8s deployment spec for fraud-detection-worker"
+  }
+}

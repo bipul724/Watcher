@@ -1,0 +1,19 @@
+{
+  "service": "trading-api",
+  "alert": {
+    "error": "FATAL: Redis cluster failover — trading-api lost session store, all active trades orphaned",
+    "latencyMs": 12000,
+    "errorRate": 1.0,
+    "affectedEndpoints": ["/api/v3/order/submit", "/api/v3/order/cancel", "/api/v3/portfolio"],
+    "region": "us-east-1",
+    "env": "production"
+  },
+  "message": "Trading API fully down — Redis cluster failover. All order operations failing. Immediate P1.",
+  "metadata": {
+    "env": "production",
+    "region": "us-east-1",
+    "timestamp": "2026-05-02T10:30:00.000Z",
+    "pagerduty_service_id": "PTRD9012",
+    "runbook_hint": "Redis failover — verify replica promotion, flush stale sessions, restart trading-api pods"
+  }
+}
