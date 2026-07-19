@@ -1,0 +1,35 @@
+{
+  "name": "watcher-agent",
+  "version": "1.0.0",
+  "description": "Watcher — AI-governed incident response agent (OpenRouter + Discord + GitHub + Pinecone)",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "workspaces": [
+    "nodes/*"
+  ],
+  "scripts": {
+    "start": "node server.js",
+    "demo": "node scripts/trigger-demo.js",
+    "demo:local": "node scripts/trigger-demo.js --mode=local",
+    "webhook": "node scripts/trigger-webhook.js",
+    "postmortem:gen": "node scripts/generate-postmortem.js",
+    "seed:pinecone": "node scripts/seed-pinecone.js",
+    "lint": "eslint nodes/ --ext .js"
+  },
+  "dependencies": {
+    "@pinecone-database/pinecone": "^7.2.0",
+    "axios": "^1.15.2",
+    "discord.js": "^14.26.3",
+    "dotenv": "^16.4.0",
+    "express": "^5.2.1",
+    "octokit": "^5.0.5",
+    "zod": "^3.22.0",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
