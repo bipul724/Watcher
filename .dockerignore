@@ -1,0 +1,8 @@
+node_modules
+server/node_modules
+server/dist
+server/worker/node_modules
+server/worker/dist
+server/watcherai/node_modules
+watcher/
+.git
